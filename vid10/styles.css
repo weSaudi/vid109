@@ -1,0 +1,50 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Video Wrapper for Responsiveness */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Responsive video using aspect ratio */
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh; /* Limits height for better usability on small screens */
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    .video-wrapper {
+        padding: 0 10px;
+    }
+
+    .video-wrapper video {
+        max-height: 60vh; /* Reduce height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-wrapper video {
+        max-height: 50vh; /* Further reduce height for small devices */
+    }
+}
